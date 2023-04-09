@@ -219,7 +219,48 @@ import { Flexboard, FlexboardProvider, FlexboardFrame, ResizerType, Position } f
     </tbody>
 </table>
 
-## Project Created & Maintained By
+
+# Prerequisites / Dependencies
+
+1. [NodeJS](https://nodejs.org)
+   - version 16.18 +
+2. NodeJS NPM (installed with NodeJS)
+
+This project uses Rollup to create distributable React component libs. The Rollup config uses ESM imports and as such the minimum NodeJS version is 16.19.0 per this post: https://dev.to/alexeagleson/how-to-create-and-publish-a-react-component-library-2oe/comments
+
+...
+
+```
+When running rollup -c if anyone is getting SyntaxError: Unexpected Identifier error than just upgarde your nodejs version to v18 LTS, I was on 16.3 so the importing json using the assert keyword was causing this. Thanks to @nasheomirro for providing a link to a blog where it states that nodejs 17.5+ required.
+
+version 16.19.0 works just fine... just in case anyone needs to work with 16 version
+```
+
+
+# Getting Started
+
+Assuming that you have the prerequisites installed on your environment...
+
+1. Sync this Git repo
+
+1. Open a Command Line / Terminal targeting the local repo directory.
+
+1. Execute `npm install`
+
+To build the **distributable** React component libs (CJS and ESM)...
+
+  1. Execute: `npm run build`
+
+To test and examine the component in the **Storybook** environment...
+
+  1. Execute: `npm run storybook`
+
+To run the **Jest tests**...
+
+  1. Execute: `npm run test`
+
+
+# Original Project Created & Maintained By
 
 ### Divyanshu Shekhar
 
